@@ -19,7 +19,7 @@ public class MethodsLearn {
         // Accessing a non-public class from this package
         HiddenUtils.secretMethod();
 
-        // Declaring a instance of a class
+        // Declaring an instance of a class
         MyUtils var_instance = new MyUtils();
 
         // or separating declaration and assignment:
