@@ -11,4 +11,13 @@ public class MyUtils {
         int sum = first + second;
         return sum;
     }
+    // The private term modify the visibility of this method, it can only be accessed in this class
+    private static int testMethod(int number) {
+        return number + 1;
+    }
+
+    // Non-static methods can only be accessed by a Class instance in other classes
+    public void HelloNonStatic() {
+        System.out.println("Hello, I'm being executed by a MyUtils instance");
+    }
 }

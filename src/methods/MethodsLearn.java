@@ -15,6 +15,19 @@ public class MethodsLearn {
         // Methods can return values to variables or other methods (see MyUtils for the notation):
         int sum = MyUtils.sumValues(34,12);
         System.out.println("The sum is " + sum);
+
+        // Accessing a non-public class from this package
+        HiddenUtils.secretMethod();
+
+        // Declaring a instance of a class
+        MyUtils var_instance = new MyUtils();
+
+        // or separating declaration and assignment:
+        //      MyUtils var_instance;
+        //      var_instance = new MyUtils()
+
+        // Accessing a non-static method from a MyUtils instance named var_instance
+        var_instance.HelloNonStatic();
     }
 
     // We can define new methods using this notation
