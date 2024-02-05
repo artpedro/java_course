@@ -1,19 +1,12 @@
 package oop;
 
-public class Vehicle {
+public abstract class Vehicle implements Sound{
     int id;
     int wheels;
     Engine motor;
     int hits = 0;
     public Vehicle(int given_id) {
         this.id = given_id;
-    }
-    public void accelerate() {
-        if (this.motor.isBroken()) {
-            System.out.println("Can't accelerate... It's " + this.motor.model + " motor is broken");
-        } else {
-            System.out.println("Vehicle " + id + " is Accelerating...");
-        }
     }
     public void hit(Vehicle second) {
         System.out.println("Ouch! " + this.id + " vehicle hit " + second.id + " vehicle");
@@ -23,4 +16,7 @@ public class Vehicle {
             this.motor.broke();
         }
     }
+    public abstract void description();
+    public abstract void vroom();
+    public abstract void accelerate();
 }
