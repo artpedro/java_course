@@ -2,7 +2,7 @@ package collections_framework;
 
 import java.util.Objects;
 
-public class Animal {
+public class Animal implements Comparable<Animal> {
     String name;
     int age;
 
@@ -51,4 +51,16 @@ public class Animal {
         this.name = name;
         this.age = age;
     }
+
+    // Pass the instructions to how compare this object to other
+
+    public int compareTo(Animal o) {
+        if (this.age > o.age) {
+            return 1;
+        } else if (this.age < o.age) {
+            return -1;
+        }
+        return 0;
+    }
+
 }
